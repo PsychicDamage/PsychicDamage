@@ -1,3 +1,4 @@
+import { bound } from "../core";
 import { Timer } from "./Timer";
 
 export abstract class GameLoop {
@@ -8,8 +9,6 @@ export abstract class GameLoop {
     TPS: number,
     readonly timer: Timer
   ) {
-    // TODO: use @bound on the declaration
-    this.frame = this.frame.bind(this);
     this.frameTime = 1000 / TPS;
   }
 
@@ -39,6 +38,7 @@ export abstract class GameLoop {
 
   static MAX_DELTA_TIME = Infinity;
 
+  @bound
   protected frame() {
   
     // TODO: figure out time scaling
