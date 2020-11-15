@@ -1,4 +1,4 @@
-import ObjectPool from "./ObjectPool";
+import { ObjectPool } from "./ObjectPool";
 
 describe("core.ObjectPool class", () => {
 

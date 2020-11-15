@@ -1,4 +1,4 @@
-export default class ObjectPool<T, A extends unknown[] = []> {
+export class ObjectPool<T, A extends unknown[] = []> {
 
   constructor(
     private readonly creator: ObjectCreator<T, A>,
